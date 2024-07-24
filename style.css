@@ -1,0 +1,85 @@
+body {
+    background-color: #FF0000; /* Red background */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%; /* Responsive logo size */
+    height: auto;
+}
+
+h1 {
+    font-size: 1.8em; /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+.code-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.code-list li {
+    margin: 10px 0;
+    font-size: 18px; /* Adjusted font size for mobile */
+    background-color: #CC0000; /* Slightly darker red for list items */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for better readability */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor for clickable items */
+}
+
+.code-list li:hover {
+    background-color: #AA0000; /* Darker red on hover */
+    transform: scale(1.02); /* Slightly enlarge item on hover */
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    font-size: 16px; /* Adjust font size for mobile */
+}
+
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+
+    .code-list li {
+        font-size: 16px; /* Adjusted font size for better readability on mobile */
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .notification {
+        font-size: 14px; /* Smaller font size for mobile notifications */
+    }
+}
